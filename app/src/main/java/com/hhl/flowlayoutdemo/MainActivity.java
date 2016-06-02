@@ -12,6 +12,8 @@ import android.view.View;
 import com.hhl.library.FlowTagLayout;
 import com.hhl.library.OnTagClickListener;
 import com.hhl.library.OnTagSelectListener;
+import com.luo.mylibrary.JitPackActivity;
+import com.luo.mylibrary.JitPackActivityTwo;
 import com.luo.mylibrary.JitPackUtil;
 
 import java.util.ArrayList;
@@ -70,8 +72,10 @@ public class MainActivity extends AppCompatActivity {
                         sb.append(parent.getAdapter().getItem(i));
                         sb.append(":");
                     }
-                    Snackbar.make(parent, "移动研发:" + sb.toString(), Snackbar.LENGTH_LONG)
+                    Snackbar.make(parent, "移动研发:" + sb.toString()+"  ", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+
+
                 }else{
                     Snackbar.make(parent, "没有选择标签", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
@@ -108,6 +112,10 @@ public class MainActivity extends AppCompatActivity {
 
         initMobileData();
         JitPackUtil.isJitpack();//TODO
+        JitPackActivity.JitPackActiMehtod();
+        JitPackActivityTwo.JitPackActiMehtod();
+
+
     }
 
     private void initMobileData() {
