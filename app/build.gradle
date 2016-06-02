@@ -27,10 +27,12 @@ dependencies {
     compile project(':library')
 
     compile 'com.android.support:design:23.1.1'
-    compile 'com.github.zhaokaiqiang.klog:library:1.4.0'
-    compile 'com.github.luozhimin0918:JitPackDemo:1.1.1'
 
-//    compile 'com.github.luozhimin0918:LuoComLibJitPack:m1.0.1'
-//    compile 'com.github.luozhimin0918:comlib:m1.0.2'
-    compile 'com.github.luozhimin0918:LuoComLibJitPack:m1.0.3'
+
+
+//JitPack.Io 我自己的开源库  github
+    compile 'com.github.luozhimin0918:JitPackDemo:1.1.1'
+    compile 'com.github.luozhimin0918.LuoComLibJitPack:comlib:m1.0.8'
+    compile 'com.github.luozhimin0918.LuoComLibJitPack:xrecyclerview:m1.0.8'
+    compile 'com.github.luozhimin0918.LuoComLibJitPack:luolib:m1.0.12'
 }
