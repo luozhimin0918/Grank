@@ -34,5 +34,5 @@ dependencies {
     compile 'com.github.luozhimin0918:JitPackDemo:1.1.1'
     compile 'com.github.luozhimin0918.LuoComLibJitPack:comlib:m1.0.8'
     compile 'com.github.luozhimin0918.LuoComLibJitPack:xrecyclerview:m1.0.8'
-    compile 'com.github.luozhimin0918.LuoComLibJitPack:luolib:m1.0.12'
+    compile 'com.github.luozhimin0918.LuoComLibJitPack:luolib:m1.0.13'
 }
