@@ -1,5 +1,6 @@
 package com.hhl.flowlayoutdemo.activity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,6 +16,7 @@ import com.hhl.flowlayoutdemo.R;
 import com.hhl.flowlayoutdemo.adapter.RecyclePinglunAdapter;
 import com.hhl.flowlayoutdemo.model.CommentListEntity;
 import com.hhl.flowlayoutdemo.model.PaginationJsonEntity;
+import com.hhl.flowlayoutdemo.utill.TextTypeUtil;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.luo.luolib.base.BaseBestActivity;
@@ -38,6 +40,9 @@ public class MyActivity extends BaseBestActivity {
     public void dosetPromo() {
         addViewLay();//添加布局
 
+        TextTypeUtil.applyFont(mContext, getWindow().getDecorView(),"fonts/simsun.ttc");
+
+
         Intent intent = getIntent();
         if (intent != null) {
             proId = "22765";
@@ -56,7 +61,7 @@ public class MyActivity extends BaseBestActivity {
     private void addViewLay() {
         view = LayoutInflater.from(mContext).inflate(R.layout.item_layout_quedin, null);
 
-        Ba________addViewXuanFuLinear(view);
+//        Ba________addViewXuanFuLinear(view);
     }
 
     List<CommentListEntity.DataEntity> promotePostDateList = new ArrayList<CommentListEntity.DataEntity>();//本类帖子 分类里所有数据

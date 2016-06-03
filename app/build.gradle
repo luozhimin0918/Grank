@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 
 dependencies {
@@ -27,8 +28,6 @@ dependencies {
     compile project(':library')
 
     compile 'com.android.support:design:23.1.1'
-
-
 
 //JitPack.Io 我自己的开源库  github
     compile 'com.github.luozhimin0918:JitPackDemo:1.1.1'
