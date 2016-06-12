@@ -15,9 +15,7 @@ import com.hhl.library.FlowTagLayout;
 import com.hhl.library.OnTagClickListener;
 import com.hhl.library.OnTagSelectListener;
 import com.luo.comlib.JitComLibUtil;
-import com.luo.mylibrary.JitPackActivity;
-import com.luo.mylibrary.JitPackActivityTwo;
-import com.luo.mylibrary.JitPackUtil;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -114,9 +112,7 @@ public class MainActivity extends AppCompatActivity {
         initSizeData();
 
         initMobileData();
-        JitPackUtil.isJitpack();//TODO
-        JitPackActivity.JitPackActiMehtod();
-        JitPackActivityTwo.JitPackActiMehtod();
+
         JitComLibUtil.isJitpack();
 
 
