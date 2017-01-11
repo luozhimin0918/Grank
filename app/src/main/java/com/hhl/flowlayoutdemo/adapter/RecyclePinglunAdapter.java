@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.NetworkImageView;
 import com.hhl.flowlayoutdemo.R;
 import com.hhl.flowlayoutdemo.model.CommentListEntity;
+import com.hhl.flowlayoutdemo.utill.TextTypeUtil;
 import com.luo.luolib.dp.AppContextApplication;
 
 import java.util.HashMap;
@@ -49,6 +50,9 @@ public class RecyclePinglunAdapter extends RecyclerView.Adapter<RecyclePinglunAd
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         // 创建一个View，简单起见直接使用系统提供的布局，就是一个TextView
         View view = View.inflate(viewGroup.getContext(), R.layout.adapter_activity_invitation_pinglun_item, null);
+        TextTypeUtil.applyFont(mContext, view,"fonts/simsun.ttc");
+
+
         // 创建一个ViewHolder
         ViewHolder holder = new ViewHolder(view);
         return holder;
