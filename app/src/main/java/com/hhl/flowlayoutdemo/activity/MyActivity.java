@@ -41,7 +41,7 @@ public class MyActivity extends BaseBestActivity {
     public void dosetPromo() {
         addViewLay();//添加布局
 
-        TextTypeUtil.applyFont(mContext, getWindow().getDecorView(),"fonts/simsun.ttc");
+//        TextTypeUtil.applyFont(mContext, getWindow().getDecorView(),"fonts/simsun.ttc");
 
 
         Intent intent = getIntent();
@@ -61,8 +61,8 @@ public class MyActivity extends BaseBestActivity {
     View view;
     private void addViewLay() {
         view = LayoutInflater.from(mContext).inflate(R.layout.item_layout_quedin, null);
-        Ba________addViewToallLinear(view);
-//        Ba________addViewXuanFuLinear(view);
+//        Ba________addViewToallLinear(view);
+        Ba________addViewXuanFuLinear(view);
     }
 
     List<KXTcommentListEntity.DataBean> promotePostDateList = new ArrayList<KXTcommentListEntity.DataBean>();//本类帖子 分类里所有数据
