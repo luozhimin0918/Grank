@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.NetworkImageView;
 import com.hhl.flowlayoutdemo.R;
 import com.hhl.flowlayoutdemo.model.CommentListEntity;
+import com.hhl.flowlayoutdemo.model.KXTcommentListEntity;
 import com.hhl.flowlayoutdemo.utill.TextTypeUtil;
 import com.luo.luolib.dp.AppContextApplication;
 
@@ -36,10 +37,10 @@ public class RecyclePinglunAdapter extends RecyclerView.Adapter<RecyclePinglunAd
 
     // 数据集
 
-    private List<CommentListEntity.DataEntity> pinglunList;
+    private List<KXTcommentListEntity.DataBean> pinglunList;
     RequestQueue mQueue;
     Context mContext;
-    public RecyclePinglunAdapter(List<CommentListEntity.DataEntity> pinglunList, Context mContext) {
+    public RecyclePinglunAdapter(List<KXTcommentListEntity.DataBean> pinglunList, Context mContext) {
         super();
         mQueue =  AppContextApplication.getInstance().getmRequestQueue();
         this.pinglunList=pinglunList;
@@ -61,8 +62,8 @@ public class RecyclePinglunAdapter extends RecyclerView.Adapter<RecyclePinglunAd
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int i) {
         // 绑定数据到ViewHolder上
-        CommentListEntity.DataEntity.UserEntity user=pinglunList.get(i).getUser();
-        String UserimageUrl=user.getAvatar();
+        KXTcommentListEntity.DataBean user=pinglunList.get(i);
+        String UserimageUrl=user.getThumb();
 //        viewHolder.imageTitle.setDefaultImageResId(R.drawable.loading);
 //        viewHolder.imageTitle.setErrorImageResId(R.drawable.loading);
 //        if(mQueue.getCache().get(UserimageUrl)==null){
@@ -72,10 +73,10 @@ public class RecyclePinglunAdapter extends RecyclerView.Adapter<RecyclePinglunAd
 
 
 
-        viewHolder.userName.setText(user.getName());
-        viewHolder.AddTime.setText(pinglunList.get(i).getAdd_time());
+        viewHolder.userName.setText(user.getTitle());
+        viewHolder.AddTime.setText(pinglunList.get(i).getAddtime());
 
-        viewHolder.pingContent.setText(pinglunList.get(i).getContent());
+        viewHolder.pingContent.setText(pinglunList.get(i).getDescription());
 
 
     }

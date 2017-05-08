@@ -15,6 +15,7 @@ import com.android.volley.VolleyError;
 import com.hhl.flowlayoutdemo.R;
 import com.hhl.flowlayoutdemo.adapter.RecyclePinglunAdapter;
 import com.hhl.flowlayoutdemo.model.CommentListEntity;
+import com.hhl.flowlayoutdemo.model.KXTcommentListEntity;
 import com.hhl.flowlayoutdemo.model.PaginationJsonEntity;
 import com.hhl.flowlayoutdemo.utill.TextTypeUtil;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
@@ -60,16 +61,16 @@ public class MyActivity extends BaseBestActivity {
     View view;
     private void addViewLay() {
         view = LayoutInflater.from(mContext).inflate(R.layout.item_layout_quedin, null);
-
+        Ba________addViewToallLinear(view);
 //        Ba________addViewXuanFuLinear(view);
     }
 
-    List<CommentListEntity.DataEntity> promotePostDateList = new ArrayList<CommentListEntity.DataEntity>();//本类帖子 分类里所有数据
+    List<KXTcommentListEntity.DataBean> promotePostDateList = new ArrayList<KXTcommentListEntity.DataBean>();//本类帖子 分类里所有数据
     public int page = 1;
     int loadingTag = 2;//刷新flag   2 默认   1 下拉刷新  -1是上拉更多
 
     private void initData(final String id) {
-        String url = "http://mapp.aiderizhi.com/?url=/comment/list";//
+        String url = "http://appapi.kxt.com/data/dianping?num=10";//
 
         Map<String, String> map = new HashMap<String, String>();
 
@@ -100,12 +101,11 @@ public class MyActivity extends BaseBestActivity {
         }
 
 
-        FastJsonRequest<CommentListEntity> fastJsonCommunity = new FastJsonRequest<CommentListEntity>(Request.Method.POST, url, CommentListEntity.class, null, new Response.Listener<CommentListEntity>() {
+        FastJsonRequest<KXTcommentListEntity> fastJsonCommunity = new FastJsonRequest<KXTcommentListEntity>(Request.Method.GET, url, KXTcommentListEntity.class, null, new Response.Listener<KXTcommentListEntity>() {
             @Override
-            public void onResponse(CommentListEntity commentListEntity) {
+            public void onResponse(KXTcommentListEntity commentListEntity) {
 
-                CommentListEntity.StatusEntity status = commentListEntity.getStatus();
-                if (status.getSucceed() == 1) {
+                if (commentListEntity.getRet() == 0) {
 
 
                     Ba________progresNetworkGone();
@@ -114,7 +114,7 @@ public class MyActivity extends BaseBestActivity {
                     if (loadingTag == -1) {
 
 
-                        List<CommentListEntity.DataEntity> p = commentListEntity.getData();
+                        List<KXTcommentListEntity.DataBean> p = commentListEntity.getData();
                        KLog.d("" + promotePostDateList.size() + "1111++++promotePostDateList");
                         for (int i = 0; i < p.size(); i++) {
                             promotePostDateList.add(p.get(i));
@@ -153,7 +153,7 @@ public class MyActivity extends BaseBestActivity {
 
                     Ba________shibaiNetworkData();
                     // 请求失败
-                   KLog.d( "" + status.getSucceed() + "++++success=0》》》》");
+                   KLog.d( ""  + "++++success=0》》》》");
 
                 }
 
