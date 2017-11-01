@@ -1,23 +1,27 @@
-# FlowTagLayout
-Android流式布局，支持点击、单选、多选等，适合用于产品标签等，用法采用Adapter模式，和ListView、GridView用法一样！！！
+### 介绍
+一款优雅的干货集中营android客户端，实现了沉浸式状态栏[另外两种android沉浸式状态栏实现思路](http://www.jianshu.com/p/b100b64544f3)(第一种实现思路)，无缝切换换肤[MultipleTheme](https://github.com/dersoncheng/MultipleTheme),Icon Font([Icon Font --Android图标也能轻松换肤](http://www.jianshu.com/p/dd01072998c5)),带3D感的侧滑菜单[ResideLayout](https://github.com/dongjunkun/ResideLayout)，刷新加载[SwipeToLoadLayout](https://github.com/Aspsine/SwipeToLoadLayout)，[material-dialogs](https://github.com/afollestad/material-dialogs)……，麻雀虽小五脏俱全，练习之作，该有的都有了。
 
-****
+### 下载地址
+ - [干货集中营（GanK）](http://fir.im/9qkj)
 
-##特色
+### 相关博客介绍
+ - [一款优雅的干货集中营Android客户端，实现了沉浸式状态栏，无缝换肤，带3D感觉的侧滑菜单……](http://www.jianshu.com/p/3a78ea86b571)
 
-* 填充数据和ListView、GridView用法一样使用Adapter，更新数据直接通过adapter.notifyDataChanged来更新
-* 支持点击、单选、多选事件
-* 三种模式：FLOW_TAG_CHECKED_NONE、FLOW_TAG_CHECKED_SINGLE、FLOW_TAG_CHECKED_MULTI
-* 支持OnTagClickListener单点事件
-* 支持OnTagSelectListener单选、多选事件
+### 预览
+![gank.io](https://raw.githubusercontent.com/dongjunkun/GanK/master/art/gank1.png)
 
-****
 
-#效果图
+![gank.io](https://raw.githubusercontent.com/dongjunkun/GanK/master/art/gank2.png)
 
-![image](https://github.com/hanhailong/AndroidStudyResources/blob/master/screenshot/flow_tag.gif?raw=true)
 
-#TODO
+### 感谢
+ - [干货集中营](http://gank.io/)提供的数据
+ 
+ 
+## 打赏鼓励
+如果你觉得我的项目对你有帮助，请扫描下方的二维码随意打赏，您的支持是我最好的动力!
+![](/art/collent_money.png)
 
-* 添加初始化选中标签
-* 其他...
+### 关于我
+ - 我的简书：[dongjunkun](http://www.jianshu.com/users/f07458c1a8f3/latest_articles)
+ - 我的github：[dongjunkun](https://github.com/dongjunkun)
